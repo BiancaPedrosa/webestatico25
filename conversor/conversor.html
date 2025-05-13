@@ -1,0 +1,33 @@
+<html>
+<head>
+       <title>Corversor!</title>
+	   <link rel="stylesheet" type="text/css" href="conversor.css"></link>
+	   <script language="javascript" src="conversor.js"></script>
+</head>
+<body>
+       <h1 align="center"class="prata">Conversor de moedas</h1>
+	   <form name="formulario">
+			De:
+			<select name="de">
+			<option  class="verde"value="Real">Real</option>
+			<option  class="verde"value="Euro">Euro</option>
+			<option  class="verde"value="Dolar" selected >Dolar</option>
+			</select>
+			<br/>
+			Para:
+			<select name="para">
+			<option class="azul"value="Dolar">Dolar</option>
+			<option class="azul"value="Euro" >Euro</option>
+			<option class="azul"value="Real" selected>Real</option>
+			</select></br>
+			Quantia:
+			<input type='text' name='quantia' value="1"> 
+			<input type="button" id="btCalcular" value="calcular" onclick="converter()"/>
+			</br>
+			Resultado:
+			<input type='text' name='resultado' placeholder="click em calcular" readonly />
+			<input type="reset" name="limpar" value="limpar"/>
+			<p class="cinza" align="left">Cotação utilizada US$ = R$ 5 e 	€= R$ 5.5</p>
+	</form>
+</body>
+</html>
