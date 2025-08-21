@@ -1,0 +1,95 @@
+form {
+    border: 2px solid; /* Define uma borda de 2px sólida */
+    padding: 20px; /* Define um preenchimento de 20px */
+    width: 90%; /* Largura ajustada para melhor responsividade */
+    max-width: 800px; /* Adicionada uma largura máxima */
+    margin: 0 auto; /* Centraliza o formulário */
+    overflow: hidden; /* Esconde o manipulador de redimensionamento */
+}
+
+div {
+    padding-left: 0; /* Removido o preenchimento à esquerda */
+    margin-bottom: 15px; /* Adicionada margem para espaçamento */
+}
+
+h2 {
+    background-color: black; /* Define a cor de fundo como preto */
+    border: solid; /* Define uma borda sólida */
+    border-color: black; /* Define a cor da borda como preto */
+    color: white; /* Define a cor do texto como branco */
+    font-family: Arial, Helvetica, sans-serif; /* Define a fonte */
+    padding-left: 15px; /* Reduz o preenchimento */
+    text-align: center; /* Centraliza o título */
+}
+
+label {
+    display: block; /* Coloca os rótulos acima dos inputs */
+    padding-right: 0; /* Removido o preenchimento à direita */
+    margin-bottom: 5px; /* Adicionada margem para espaçamento */
+}
+
+#txtNome, 
+#txtPeso,
+#txtAltura,
+#txtGordura {
+    width: 100%; /* Largura total */
+    box-sizing: border-box; /* Inclui borda e preenchimento na largura total */
+}
+
+#btmAdd {
+    background-color: green; /* Define a cor de fundo como verde */
+    border: none; /* Remove a borda */
+    color: white; /* Define a cor do texto como branco */
+    padding: 15px 32px; /* Define o preenchimento */
+    text-align: center; /* Centraliza o texto */
+    text-decoration: none; /* Remove a decoração de texto */
+    display: block; /* Transforma em um elemento de bloco */
+    width: 100%; /* Largura total */
+    font-size: 16px; /* Define o tamanho da fonte */
+    margin: 10px 0; /* Margem ajustada */
+    cursor: pointer; /* Define o cursor como uma mão */
+    border-radius: 4px; /* Define um raio de borda */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+    transition-duration: 0.4s; /* Define a duração da transição */
+    box-sizing: border-box; /* Inclui preenchimento e borda na largura total */
+}
+
+#btmAdd:hover {
+    background-color: #4CAF50; /* Define a cor de fundo no hover */
+    color: white; /* Define a cor do texto no hover */
+}
+
+table {
+    font-family: arial, sans-serif; /* Define a fonte */
+    border-collapse: collapse; /* Colapsa as bordas da tabela */
+    width: 100%; /* Largura total */
+    box-sizing: border-box; /* Inclui preenchimento e borda na largura total */
+}
+
+td,
+th {
+    border: 1px solid #dddddd; /* Define uma borda de 1px sólida */
+    text-align: left; /* Alinha o texto à esquerda */
+    padding: 8px; /* Define o preenchimento */
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd; /* Define a cor de fundo para linhas pares */
+}
+
+/* Media query para telas MAIORES (a partir de 768px) */
+@media (min-width: 768px) {
+    form {
+        width: 80%; /* Reverte para 80% da largura em telas maiores */
+    }
+
+    div {
+        padding-left: 40px; /* Restaura o preenchimento para telas maiores */
+    }
+
+
+    #btmAdd {
+        display: inline-block; /* Restaura o display inline-block */
+        width: auto; /* Ajusta a largura ao conteúdo */
+    }
+}
