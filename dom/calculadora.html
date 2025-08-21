@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora com DOM</title>
+</head>
+<body >
+    <label for="numero">Calculadora:</label>
+    <input type="text" id="numero" value="2*2+1" title="Digite a expressão para calcular">
+    <input type=button value="Calcular" onClick="calcular()"><br>
+    Histórico de Resultados
+    <table id="tabelaResultado" border="1">
+        <thead>
+            <th>Expressão</th>
+            <th>Resultado</th>
+        </thead>
+    </table>
+    <script>
+    function calcular() {
+        var entrada= document.getElementById('numero').value;
+        var resultado= eval(entrada);
+        //criando nova linha da tabela com duas células
+        novaLinha=document.createElement("tr");     
+        celula1=document.createElement("td");              
+        celula1.textContent=entrada; 
+        celula2=document.createElement("td");     
+        celula2.textContent=resultado; 
+        //adicionando as células à novaLinha
+        novaLinha.append(celula1); 
+        novaLinha.append(celula2);
+        //adiciona a nova linha à tabela
+        tabela=document.getElementById("tabelaResultado");
+        tabela.appendChild(novaLinha);
+    }
+    </script>
+</body>
+</html>
