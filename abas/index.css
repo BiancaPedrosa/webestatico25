@@ -1,0 +1,35 @@
+/* Container das abas */
+.abas-container {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Botões das abas */
+.aba-botao {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Efeito ao passar o mouse sobre os botões */
+.aba-botao:hover {
+  background-color: #ddd;
+}
+
+/* Estilo para a aba ativa */
+.aba-botao.ativo {
+  background-color: #ccc;
+}
+
+/* Conteúdo das abas */
+.aba-conteudo {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}

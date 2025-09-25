@@ -1,22 +1,25 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
-	<link rel="stylesheet" href="css/peso.css"/>
+	<meta charset="utf-8">
+	<title>Calculadora Peso Ideal</title>
+	<link rel="stylesheet" href="css/peso.css">
 </head>
 <body>
-	<h1> Calculadora Peso Ideal </h1>
 	<form name="ficha">
-		Altura: 
-		<input type='TEXT' name='altura' size=6 />
-		Sexo: 
-		<select  name='sexo'> 
+		<h1> Calculadora Peso Ideal </h1>
+		<label for="altura">Altura:</label>
+		<input type='text' id='altura' name='altura' size=6 placeholder="Digite sua altura" title="Informe sua altura em metros">
+		<label for="sexo">Sexo:</label>
+		<select id="sexo" name="sexo"> 
 			<option value='feminino'>feminino</option>
 			<option value='masculino'>masculino</option>
 		</select>
 
 		<button type=button onclick=calculapeso()>Envia!</button>
 
-		PESO IDEAL:
-		<input type='text' name='pesoideal' disabled />
+		<label for="pesoideal">PESO IDEAL:</label>
+		<input type='text' id='pesoideal' name='pesoideal' disabled placeholder="Peso ideal" title="Peso ideal calculado">
 	</FORM>
 	<script type="text/javascript" src="js/peso.js"></script>
 </body>	

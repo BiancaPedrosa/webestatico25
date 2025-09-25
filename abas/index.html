@@ -1,0 +1,29 @@
+<div class="abas-container">
+  <button class="aba-botao ativo" onclick="mostrarConteudo(event, 'clientes')">Clientes</button>
+  <button class="aba-botao" onclick="mostrarConteudo(event, 'produtos')">Produtos</button>
+</div>
+
+<div id="clientes" class="aba-conteudo">
+  <h2>Lista de Clientes</h2>
+  <p>Aqui você pode listar seus clientes.</p>
+  <table>
+    <tr>
+      <th>Nome</th>
+      <th>Email</th>
+    </tr>
+    <tr>
+      <td>João da Silva</td>
+      <td>joao@exemplo.com</td>
+    </tr>
+  </table>
+</div>
+
+<div id="produtos" class="aba-conteudo" style="display: none;">
+  <h2>Produtos Existentes</h2>
+  <p>Aqui você pode listar seus produtos.</p>
+  <ul>
+    <li>Produto A</li>
+    <li>Produto B</li>
+    <li>Produto C</li>
+  </ul>
+</div>
