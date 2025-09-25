@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="oficial.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Avaliação dos Hábitos Alimentares</h2>
+        <form id="questionnaire-form">
+            
+            <div class="question">
+                <label for="q1">Quantas vezes você come ao dia?</label>
+                <select id="q1" name="q1">
+                    <option value="1x">1x</option>
+                    <option value="2x">2x</option>
+                    <option value="3x">3x</option>
+                    <option value="+3x">+3x</option>
+                </select>
+            </div>
+
+            
+            <div class="question">
+                <label for="q2">Qual refeição você considera a mais importante?</label>
+                <input type="radio" id="cafe" name="q2" value="cafe"> Café da manhã<br>
+                <input type="radio" id="almoco" name="q2" value="almoco"> Almoço<br>
+                <input type="radio" id="jantar" name="q2" value="jantar"> Jantar<br>
+            </div>
+
+            
+            <div class="question">
+                <label>Em que consiste a sua refeição principal e como é preparada?</label>
+                <input type="checkbox" id="fresca" name="q3" value="fresca"> Refeição fresca produzida em casa<br>
+                <input type="checkbox" id="restaurante" name="q3" value="restaurante"> Refeição em restaurante<br>
+                <input type="checkbox" id="microondas" name="q3" value="microondas"> Refeição em forno microondas (pré-cozida ou congelada)<br>
+            </div>
+
+            
+            <div class="question">
+                <label for="q4">Qual é a porcentagem de carne ou derivados em sua dieta regular?</label>
+                <input type="radio" id="90" name="q4" value="90"> 90% ou mais<br>
+                <input type="radio" id="75" name="q4" value="75"> 75%<br>
+                <input type="radio" id="50" name="q4" value="50"> 50%<br>
+                <input type="radio" id="25" name="q4" value="25"> 25%<br>
+                <input type="radio" id="menos25" name="q4" value="menos25"> Menos de 25%<br>
+            </div>
+
+            
+            <div class="question">
+                <label for="q5">Qual o seu IMC (Índice de Massa Corporal)?</label>
+                <select id="q5" name="q5">
+                    <option value="menos18">Menos que 18,5 (Abaixo do peso)</option>
+                    <option value="18a25">18,5-25 (Peso ideal)</option>
+                    <option value="25a30">25-30 (Sobrepeso)</option>
+                    <option value="30a35">30-35 (Obesidade Moderada)</option>
+                    <option value="35a40">35-40 (Obesidade)</option>
+                </select>
+            </div>
+
+            <button type="submit">Enviar</button>
+        </form>
+        <div id="result" class="result-container"></div>
+    </div>
+    <script src="oficial.js"></script>
+    
+</head>
+</body>
+</html>

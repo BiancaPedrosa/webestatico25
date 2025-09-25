@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="idth=device-width, initial-scale=1.0">
+    <title>Avaliação de Hábitos Alimwentares</title>
+    <style>
+        
+        body {
+            background-color: #f2f8f4;
+            background-image: url('fundosaudavel.jpg'); 
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            width: 60%;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            text-align: center;
+            color: #2f4f4f;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        label {
+            font-size: 18px;
+            color: #2f4f4f;
+        }
+        select, input[type="radio"], input[type="checkbox"] {
+            margin-left: 10px;
+        }
+        .green {
+            color: green;
+        }
+        .red {
+            color: red;
+        }
+        .button-container {
+            text-align: center;
+        }
+        .submit-btn {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Avaliação dos Seus Hábitos Alimentares</h2>
+        <form id="form-habitos" onsubmit="calcularPontuacao(event)">
+            
+            <div class="question">
+                <label class="green">1. Quantas vezes você come ao dia?</label><br>
+                <select id="q1" class="green">
+                    <option value="10">1x</option>
+                    <option value="10">2x</option>
+                    <option value="5">3x</option>
+                    <option value="0">+ 3x</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label class="green">2. Qual refeição você considera a mais importante?</label><br>
+                <input type="radio" name="refeicao" value="10" id="cafe-da-manha"> <label for="cafe-da-manha" class="green">Café da manhã</label><br>
+                <input type="radio" name="refeicao" value="5" id="almoco"> <label for="almoco" class="green">Almoço</label><br>
+                <input type="radio" name="refeicao" value="0" id="jantar"> <label for="jantar" class="green">Jantar</label><br>
+            </div>
+
+            <div class="question">
+                <label class="green">3. Em que consiste a sua refeição principal e como é preparada?</label><br>
+                <input type="checkbox" value="10" id="refeicao-fresca"> <label for="refeicao-fresca" class="green">Refeição fresca produzida em casa</label><br>
+                <input type="checkbox" value="5" id="refeicao-restaurante"> <label for="refeicao-restaurante" class="green">Refeição em restaurante</label><br>
+                <input type="checkbox" value="0" id="refeicao-microondas"> <label for="refeicao-microondas" class="green">Refeição em forno microondas (pré-cozida ou congelada)</label><br>
+            </div>
+
+            <div class="question">
+                <label class="green">4. Qual é a porcentagem de carne ou derivados em sua dieta regular?</label><br>
+                <input type="radio" name="carne" value="10" id="90-plus"> <label for="90-plus" class="green">90% ou mais</label><br>
+                <input type="radio" name="carne" value="10" id="75"> <label for="75" class="green">75%</label><br>
+                <input type="radio" name="carne" value="5" id="50"> <label for="50" class="green">50%</label><br>
+                <input type="radio" name="carne" value="0" id="25"> <label for="25" class="green">25%</label><br>
+                <input type="radio" name="carne" value="0" id="menos-25"> <label for="menos-25" class="green">Menos de 25%</label><br>
+            </div>
+
+            <div class="question">
+                <label class="green">5. Qual o seu IMC (Índice de Massa Corporal?)</label><br>
+                <input type="radio" name="imc" value="10" id="abaixo-peso"> <label for="abaixo-peso" class="green">Menos que 18,5 (Abaixo do peso)</label><br>
+                <input type="radio" name="imc" value="10" id="peso-ideal"> <label for="peso-ideal" class="green">18,5-25 (Peso ideal)</label><br>
+                <input type="radio" name="imc" value="5" id="sobre-peso"> <label for="sobre-peso" class="green">25-30 (Sobrepeso)</label><br>
+                <input type="radio" name="imc" value="0" id="moderada"> <label for="moderada" class="green">30-35 (Obesidade Moderada)</label><br>
+                <input type="radio" name="imc" value="0" id="obesidade"> <label for="obesidade" class="green">35-40 (Obesidade) </label><br>
+            </div>
+
+          
+
+            <div class="button-container">
+                <button type="submit" class="submit-btn">Enviar Avaliação</button>
+            </div>
+
+        </form>
+    </div>
+
+    <script>
+      
+        function calcularPontuacao(event) {
+            event.preventDefault(); 
+
+            let pontuacao = 0;
+            
+            
+            pontuacao += parseInt(document.getElementById('q1').value);
+
+           
+            const refeicao = document.querySelector('input[name="refeicao"]:checked');
+            if (refeicao) pontuacao += parseInt(refeicao.value);
+
+            const imc = document.querySelector('input[name="imc"]:checked');
+            if (imc) pontuacao += parseInt(imc.value);
+
+            const carne = document.querySelector('input[name="carne"]:checked');
+            if (carne) pontuacao += parseInt(carne.value);
+
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+            checkboxes.forEach(checkbox => {
+                pontuacao += parseInt(checkbox.value);
+
+            });
+
+
+
+           
+            alert("Sua pontuação total é: " + pontuacao + " pontos.");
+        }
+    </script>
+</body>
+</html>

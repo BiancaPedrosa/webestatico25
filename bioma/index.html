@@ -1,0 +1,151 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Biomas</title>
+   <style>
+    img{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 40%;
+      }
+      h1, h2 {
+         color: red;
+         text-align: center;
+      }
+      main{
+         background-color: azure;
+         width: 60%;
+         margin: auto
+      }
+      .table-container {
+         width: 80%; /* Garante que a div ocupe a largura total */
+         display: flex; /* Usa flexbox para centralizar */
+         justify-content: center; /* Centraliza horizontalmente */
+         margin: auto;
+      }
+      table {
+         width: 60%;
+         border-collapse: collapse; /* Remove espaços entre as bordas */
+         margin: 20px 0; /* Adiciona margem superior e inferior */
+      }
+
+      th, td {
+         border: 1px solid #ddd; /* Adiciona borda às células */
+         padding: 8px; /* Adiciona preenchimento às células */
+         text-align: left; /* Alinha o texto à esquerda */
+      }
+
+      th {
+         background-color: #f2f2f2; /* Cor de fundo para o cabeçalho */
+         font-weight: bold; /* Deixa o texto do cabeçalho em negrito */
+      }
+
+      tr:nth-child(even) {
+         background-color: #f9f9f9; /* Cor de fundo para linhas pares */
+      }
+      nav {
+         text-align: center;
+         background-color: #f0f0f0; /* Cor de fundo cinza claro */
+         padding: 10px; /* Adiciona um pouco de espaço interno */
+      }
+
+      footer {
+         text-align: center;
+         background-color: #f0f0f0; /* Cor de fundo cinza claro */
+         padding: 10px; /* Adiciona um pouco de espaço interno */
+         margin-top: 20px; /* Adiciona um pouco de espaço acima do footer */
+      }
+       .image-container {
+         display: flex;
+         flex-direction: row;
+         justify-content: center; /* Opcional: alinha as imagens no centro */
+         align-items: center; /* Opcional: alinha as imagens verticalmente */
+      }
+
+      .image-container img {
+         width: 40%; /* Ajuste a largura conforme necessário */
+         margin: 10px; /* Opcional: adiciona um espaço entre as imagens */
+      }
+   </style>
+</head>
+<body>
+   <nav>
+      <a href="#intro">Início</a>
+      <a href="#curiosidades">Curiosidades</a>
+      <a href="#faunaFlora">Fauna e Flora</a>
+      <a></a>
+   </nav>
+   <main>
+      <section id="intro">
+         <h1>Bioma Mata Atlântica</h1>
+         <p>
+            Mata Atlântica é um bioma rico em biodiversidade e também ameaçado pelo ser humano. Apresenta grande variedade de espécies animais e vegetais, sendo algumas dessas endêmicas.
+         </p>
+         <p>
+            Uma das espécies mais conhecidas de animais da Mata Atlântica é, sem dúvidas, o mico-leão-dourado (Leontopithecus rosalia), espécie hoje considerada símbolo desse bioma. Essa espécie é endêmica e podia ser encontrada, originalmente, em toda a região costeira do Rio de Janeiro e sul do Espirito Santo.
+         </p>
+         <div class="image-container">
+            <img src="https://s2.static.brasilescola.uol.com.br/img/2019/04/vegetacao-mata-atlantica.jpg" alt="Foto de floresta densa">
+            <img src="https://s1.static.brasilescola.uol.com.br/img/2019/04/mico-leao-dourado.jpg" alt="mico-leao-dourado">
+         </div>
+      </section>
+      <section id="curiosidades">
+         <h2>Curiosidades</h2>
+         <ol>
+            <li>A Mata Atlântica foi o primeiro bioma a ser explorado durante a colonização.</li>
+            <li> Na Mata Atlântica existem cerca de 20 mil espécies vegetais, o que corresponde a, aproximadamente, 35% das espécies brasileiras.</li>
+            <li>Na Mata Atlântica, de acordo com dados do IBGE, vivem quase 72% da população brasileira."</li>
+         </ol>
+      </section>
+      <section id="faunaFlora">
+         <h2>Fauna e Flora</h2>
+       
+        
+         <div class="table-container">
+            <table>
+               <tr>
+                  <th>Espécie</th>
+                  <th>Número</th>
+               </tr>
+               <tr>
+                  <td>Vegetais</td>
+                  <td>20 mil espécies</td>
+               </tr>
+               <tr>
+                  <td>Aves</td>
+                  <td>850 espécies</td>
+               </tr>
+               <tr>
+                  <td>Anfíbios</td>
+                  <td>370 espécies</td>
+               </tr>
+               <tr>
+                  <td>Répteis</td>
+                  <td>200 espécies</td>
+               </tr>
+               <tr>
+                  <td>Mamíferos</td>
+                  <td>270 espécies</td>
+               </tr>
+               <tr>
+                  <td>Peixes</td>
+                  <td>350 espécies</td>
+               </tr>
+            </table>
+         </div>
+      </section>
+      <footer>
+         <nav>
+            <h2>Artigos Relacionados</h2>
+            <ul>
+               <a href="https://brasilescola.uol.com.br/brasil/mata-atlantica1.htm">Brasil Escola</a>
+               <a href="https://sosma.org.br/artigos">SOS Mata Atlantica</a>
+            </ul>
+         </nav>
+      </footer>
+</main>
+</body>
+</html>

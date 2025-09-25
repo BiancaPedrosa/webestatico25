@@ -1,0 +1,26 @@
+.navbar-custom {
+    background-color: #0056b3;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+    color: white;
+}
+
+.navbar-custom .nav-link:hover {
+    color: #ffbb33;
+}
+
+.card-header {
+    font-weight: bold;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.container {
+    margin-top: 50px;
+}
